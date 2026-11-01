@@ -1,0 +1,22 @@
+{
+  "name": "dice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dice.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OldGodsofAtlanta/dice.git"
+  },
+  "author": "Tony Boyles <aaboyles@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OldGodsofAtlanta/dice/issues"
+  },
+  "homepage": "https://github.com/OldGodsofAtlanta/dice#readme",
+  "dependencies": {
+    "@3d-dice/dice-box": "^1.1.4"
+  }
+}

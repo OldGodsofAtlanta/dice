@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#000000">
+  <title>Old Gods of Atlanta - Dice Tray</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-container">
+    <div class="controls-panel">
+      <div class="dice-type-selector">
+        <button class="type-btn active" data-type="1d6">d6</button>
+        <button class="type-btn" data-type="1d20">d20</button>
+        <button class="type-btn" data-type="1d100">d100</button>
+      </div>
+    </div>
+ 
+    <div class="canvas-container" id="dice-box">
+
+    </div>
+
+    <div class="results-panel" id="results-panel">
+      <div class="results-row">
+        <span class="results-list" id="results-list"></span>
+        <span class="total-display" id="total-display">Total: 0</span>
+        <button class="clear-btn" id="clear-results">Clear</button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="dice.js"></script>
+</body>
+</html>
