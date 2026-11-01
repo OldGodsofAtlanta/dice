@@ -34,7 +34,7 @@ html, body {
   display: flex;
   gap: 0.5rem;
   justify-content: center;
-  flex-wrap: wrap;
+  align-items: center;
 }
 
 .type-btn {
@@ -47,6 +47,8 @@ html, body {
   font-weight: 600;
   cursor: pointer;
   transition: all 0.2s;
+  flex: 1;
+  min-width: 0;
 }
 
 .type-btn:hover {
@@ -54,8 +56,8 @@ html, body {
 }
 
 .type-btn.active {
-  background: #e74c3c;
-  border-color: #e74c3c;
+  background: #c0392b;
+  border-color: #c0392b;
   color: #ffffff;
 }
 

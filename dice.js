@@ -32,33 +32,11 @@ function roll(){
   Box.roll([document.querySelector('.type-btn.active').dataset.type], {});
 }
 
-const colors = [
-  "#348888",
-  "#22BABB",
-  "#9EF8EE",
-  "#FA7F08",
-  "#F24405",
-  "#F25EB0",
-  "#B9BF04",
-  "#F2B705",
-  "#F27405",
-  "#F23005",
-];
-
-function get_random(list) {
-  return list[Math.floor(Math.random() * list.length)];
-}
-
 Box.onRollComplete = (rollResult) => {
   console.log('roll results', rollResult);
-  let resultsList = document.getElementById("results-list");
-  resultsList.innerHTML = ""; // Clear previous results
-  rollResult.forEach((result) => {
-    const resultElement = document.createElement("span");
-    resultElement.textContent = `${result.sides}: ${result.value}`;
-    resultsList.appendChild(resultElement);
-  });
-  document.getElementById("total-display").textContent = `Total: ${rollResult.reduce((sum, result) => sum + result.value, 0)}`;
+  const diceBox = document.getElementById('dice-box');
+  const total = rollResult.total ?? rollResult.rolls?.reduce((sum, r) => sum + r.value, 0) ?? 0;
+  diceBox.setAttribute('aria-label', `Dice roll result: ${total}`);
 };
 
 // Touch/swipe gesture to roll dice
